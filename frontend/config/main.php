@@ -63,6 +63,8 @@ return [
                 'kontakty' => 'site/contact',
                 //'product/<page:\d+>'=>'product/productitem',
                 'pr/<slug>' => 'product/productitem',
+
+
             ],
         ],
 
