@@ -3,7 +3,7 @@
 if (gethostname() === 'jbi33.ru') {
     $db = dirname(__DIR__)."/config/db.php";
 } else {
-    $db = dirname(__DIR__)."/config/db-local.php";
+    $db = dirname(__DIR__)."/config/db.php";
 }
 
 return [

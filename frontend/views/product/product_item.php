@@ -1,3 +1,8 @@
+<?php
+$this->title = $product->title;
+$this->registerMetaTag(['name' => 'keywords', 'content' => $product->html_kw]);
+$this->registerMetaTag(['name' => 'description', 'content' => $product->html_descr]);
+?>
 <div class="men">
     <div class="single_top">
         <div class="col-md-12 single_right">

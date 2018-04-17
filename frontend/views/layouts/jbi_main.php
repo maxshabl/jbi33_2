@@ -2,7 +2,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Lookz | Home</title>
+    <title>Железобетонные кольца для колодцев.</title>
+    <meta name="yandex-verification" content="463e25becca3180d" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="/jbi_sources/css/bootstrap.css" rel='stylesheet' type='text/css' />

@@ -1910,3 +1910,8 @@ i.to_bag {
 .contact_form input {
 
 }
+@media (min-width: 768px) {
+    .col-sm-8 {
+        width: 66.67%;
+    }
+}

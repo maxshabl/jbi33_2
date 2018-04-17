@@ -18,6 +18,7 @@ return [
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
+            'baseUrl' => ''
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -44,10 +45,11 @@ return [
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             'useFileTransport' => false,
+            'viewPath' => '@common/mail',
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.yandex.ru',
-                'username' => 'jbi33@ya.ru',
+                'username' => 'jbi33@yandex.ru',
                 'password' => 'dR0VNGs5',
                 'port' => 465,
                 'encryption' => 'ssl',
@@ -56,13 +58,14 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+
             'rules' => [
+                '/' => 'site/index',
                 'o_nas' => 'site/about',
                 'produkciya' => 'product',
                 'dostavka' => 'site/dostavka',
                 'kontakty' => 'site/contact',
-                //'product/<page:\d+>'=>'product/productitem',
-                'pr/<slug>' => 'product/productitem',
+                'pr/<slug>' => 'product/productitem'
 
 
             ],

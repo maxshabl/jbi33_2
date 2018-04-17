@@ -29,7 +29,7 @@ class ContactForm extends Model
             // email has to be a valid email address
             ['email', 'email'],
             // verifyCode needs to be entered correctly
-          //  ['verifyCode', 'captcha'],
+            ['verifyCode', 'captcha'],
         ];
     }
 
@@ -55,12 +55,14 @@ class ContactForm extends Model
     public function sendEmail()
     {
         $body = " <div>Сообщение отправителя: <b> ".$this->body." </b></div>";
-        $body .= " <div>Email отправителя: <b> ".$this->email." </b></div> <div>Телефон отправителя: <b> ".$this->phone." </b></div>";
-        return Yii::$app->mailer->compose()
+        $body .= " <div>Email отправителя: <b> ".$this->email." </b></div>";
+         $body .=   "<div>Телефон отправителя: <b> ".$this->phone." </b></div>";
+         $body .=   "<div>Имя отправителя: <b> ".$this->name." </b></div>";
+        return Yii::$app->mailer->compose(['html' => 'layouts/html'], ['content' => $body])
             ->setTo('jbi33@yandex.ru')
-            ->setFrom([$this->email => 'jbi33@yandex.ru'])
+            ->setFrom('jbi33@yandex.ru')
             ->setSubject('Форма обратной связи')
-            ->setTextBody($body)
+            //->setTextBody($body)
             ->send();
     }
 }

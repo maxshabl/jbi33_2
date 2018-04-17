@@ -42,7 +42,7 @@
 <div class="header_bootm">
     <div class="col-sm-4 span_1">
         <div class="logo">
-            <a href="index.html"><img src="/jbi_sources/images/logo.png" alt=""/></a>
+            <a href="/"><img src="/jbi_sources/images/logo.png" alt=""/></a>
         </div>
     </div>
     <div class="col-sm-8 col-xs-12 row_2">

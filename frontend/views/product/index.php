@@ -16,6 +16,7 @@
                             <div class="price" >Цена: <span><?=$item->price?></span> р</div>
 
                             <!--<a title="Добавить в корзину"><i  class="to_bag"></i></a>-->
+                            <a href="/kontakty" title="Добавить в корзину"><i  class="to_bag"></i></a>
                             <input  type="text" value="1" >
                         </div>
                         <div class="clearfix"> </div>
@@ -29,11 +30,11 @@
             'pagination' => $pages,
         ]);
         ?>
-
+        <div class="clearfix"> </div>
     </div>
-</div>
 
-<script type="text/javascript">
+
+<!--<script type="text/javascript">
 
     $(document).ready(function(){              // по окончанию загрузки страницы
         $('i.to_bag').click(function(event){      // вешаем на клик по элементу с id = example-1
@@ -62,4 +63,4 @@
             console.log('Ошибка выполнения запроса!');
         });
     }
-</script>
+</script>-->

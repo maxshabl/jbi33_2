@@ -104,7 +104,7 @@ class GoodsController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post())) {
-            $model->slug = null;
+            //$model->slug = null;
             $model->imgFile = UploadedFile::getInstance($model, 'imgFile');
             // если картинка загружена, заменяем старую
             if($model->imgFile) {

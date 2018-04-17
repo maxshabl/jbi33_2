@@ -1,5 +1,5 @@
 <?php
-
+$this->title = 'Контакты для покупки железобетоных колец и ЖБИ изделий';
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \frontend\models\ContactForm */
@@ -8,12 +8,10 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
-$this->title = 'Contact';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 
 
-        <h1 style="padding-top: 50px;text-align: center;    text-transform: inherit; padding-bottom: 50px;" class="contact_head">Заказ можно сделать по указанным теолефонам, через email или форму обратной связи</h1>
+        <h1 style="padding-top: 50px;text-align: center;    text-transform: inherit; padding-bottom: 50px;" class="contact_head">Заказ можно сделать по указанным телефонам, через email или форму обратной связи</h1>
         <div class="col-sm-6">
 
             <address class="addr">
@@ -58,7 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
 
             <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
+                'template' => '<div class="row"><div class="col-lg-6">{image}</div><div class="col-lg-6">{input}</div></div>',
             ]) ?>
 
             <div class="form-group">
@@ -70,4 +68,8 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
 
 
-
+<style type="text/css">
+    #contactform-verifycode-image {
+        padding: 1px;
+    }
+</style>

@@ -1,13 +1,22 @@
 
 <?php
 
-$this->beginPage(); ?>
+$this->beginPage();
+if( Yii::$app->session->hasFlash('success') ): ?>
+    <div style="text-align: center;" class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <?php echo Yii::$app->session->getFlash('success'); ?>
+    </div>
+<?php endif;?>
+
     <!DOCTYPE HTML>
     <html>
     <head>
-        <meta http-equiv="Cache-Control" content="no-cache">
+        <title><? if($this->title) echo $this->title; else  echo 'Железобетонные кольца для колодцев.'; ?></title>
 
-        <title>Lookz | Home</title>
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <?php $this->head() ?>
+        <meta name="yandex-verification" content="463e25becca3180d" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link href="/jbi_sources/css/bootstrap.css" rel='stylesheet' type='text/css' />
