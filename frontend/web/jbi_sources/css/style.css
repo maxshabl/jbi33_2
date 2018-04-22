@@ -81,7 +81,7 @@ i.bag_left{
 	width: 80px;
     height: 46px;
     background: url(../images/bag.png)no-repeat 29px 6px #e05b5b;
-    float: left;
+    float: right;
     border-right: 1px solid #fff;
 }
 ul.bag li.bag_right{
@@ -1741,11 +1741,12 @@ i.to_bag {
 
 }
 
-.img-lnk:hover{
+.img-lnk img:hover{
     display: block;
     /* border-color: red; */
     border: 1px solid #c1b6b6;
     border-radius: 6px;
+    text-decoration: none;
 }
 
 .img-lnk{
@@ -1763,7 +1764,10 @@ i.to_bag {
 .item_price a{
     display: block;
     float: right;
-    margin-top: -5px;
+    /* margin-top: -5px; */
+    color: red;
+    font-weight: normal;
+
 }
 .cart_row{
     width: 100%;

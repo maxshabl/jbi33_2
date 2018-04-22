@@ -24,6 +24,7 @@ class ContactForm extends Model
     {
         return [
             // name, email, subject and body are required
+            [['name', 'email', 'body'],  'match', 'not' => true, 'pattern' => '/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/i'],
             [['name', 'email', 'body'], 'required'],
             ['phone', 'integer'],
             // email has to be a valid email address
@@ -32,6 +33,7 @@ class ContactForm extends Model
             ['verifyCode', 'captcha'],
         ];
     }
+
 
     /**
      * {@inheritdoc}

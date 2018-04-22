@@ -1,23 +1,28 @@
 <?php
+$this->title = 'Кольца ЖБИ для колодцев (канализации) и керамзитобетонные блоки во Владимире';
+$this->registerMetaTag(['name' => 'keywords', 'content' => 'железобетонные кольца для колодца',  'железобетонные кольца для  канализации', 'бетонные кольца', 'кольца ЖБИ', 'керамзитобетонные блоки', 'кольца во Владимире']);
+$this->registerMetaTag(['name' => 'description', 'content' => 'Кольца ЖБИ для колодцев (канализации) и керамзитобетонные блоки во Владимире']);
+
     $models = array_chunk($models, 3);
 
 ?>
 
     <div class="men">
-        <!--<h1 style="text-align: center" class="contact_head">ЖБИ изделия</h1>-->
+        <h1 style="text-align: center; font-size: 1.1em; font-weight: bold;" class="contact_head">Кольца ЖБИ для колодцев (канализации) и керамзитобетонные блоки во Владимире</h1>
         <?php foreach ($models as $chunk):?>
             <div class="contact_box">
                 <?php foreach ($chunk as $item):?>
                     <div class="col-sm-4">
-                        <a class="img-lnk" href="pr/<?=$item->slug?>"><img src="<?=$item->img?>" class="img-responsive" alt=""></a>
-                        <h4 class="item_title"> <?=$item->title?> </h4>
+                        <a class="img-lnk" href="pr/<?=$item->slug?>"><img src="<?=$item->img?>" class="img-responsive" alt="">
+                            <h4 class="item_title"> <?=$item->title?> </h4>
+                        </a>
                         <p class="item_desc"> <?=$item->short_descr?></p>
                         <div id="<?=$item->good_id?>" class="item_price">
                             <div class="price" >Цена: <span><?=$item->price?></span> р</div>
-
-                            <!--<a title="Добавить в корзину"><i  class="to_bag"></i></a>-->
+                            <a href="/kontakty" title="Заказать">Заказать</a>
+                            <!--<a title="Добавить в корзину"><i  class="to_bag"></i></a>
                             <a href="/kontakty" title="Добавить в корзину"><i  class="to_bag"></i></a>
-                            <input  type="text" value="1" >
+                            <input  type="text" value="1" >-->
                         </div>
                         <div class="clearfix"> </div>
                     </div>

@@ -13,6 +13,9 @@
             <li class="active grid"><a class="color3" href="/produkciya">Продукция</a></li>
             <li class="active grid"><a class="color4" href="/dostavka">Доставка</a></li>
             <li class="active grid"><a class="color5" href="/kontakty">Контакты</a></li>
+            <?php if (!Yii::$app->user->isGuest):?>
+                <li class="active grid"><a class="color5" href="/goods">ред. Товары</a></li>
+        <?php endif;?>
         </ul>
     </div>
     <div class="col-sm-3 header-top-right">
@@ -30,9 +33,12 @@
               <div class="clearfix"></div>
            </div>-->
         <div class="register-info">
-            <ul>
-                <li><a href="/login">Войти</a></li>
-                <li><a href="/reg">Регистрация</a></li>
+            <ul style="float:  right;">
+                <?php if (Yii::$app->user->isGuest):?>
+                    <li><a href="/site/login">Войти</a></li>
+                <?php else:?>
+                    <li><a href="/site/logout">Выйти</a></li>
+                <?php endif;?>
             </ul>
         </div>
         <div class="clearfix"> </div>
@@ -51,9 +57,9 @@
                 <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your email address';}">
                 <input type="submit" value="">
             </div>
-            <ul class="bag">
-                <a href="/cart"><i class="bag_left"> </i></a>
-                <a href="/cart"><li class="bag_right"><p id="basket"><?=(isset($basket['price'])?$basket['price']:0) ?> руб</p> </li></a>
+            <ul style="float:right" class="bag">
+                <a href="/"><i class="bag_left"> </i></a>
+                <!--<a href="/cart"><li class="bag_right"><p id="basket"><?=(isset($basket['price'])?$basket['price']:0) ?> руб</p> </li></a>-->
                 <div class="clearfix"> </div>
             </ul>
             <div class="clearfix"> </div>
